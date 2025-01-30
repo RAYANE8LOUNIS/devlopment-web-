@@ -3,8 +3,9 @@ from flask import Flask,render_template
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-   return render_template("index.html")
+def index():
+   image_filenames = ['london.jpg', 'rayane.jpg']
+   return render_template('index.html', images=image_filenames)
 
 @app.route("/about")
 def about():
@@ -13,6 +14,10 @@ def about():
 @app.route("/contact")
 def contact():
    return render_template("contactpage.html")
+
+@app.route("/grid")
+def gride():
+   return render_template("code.html")
 
 
 

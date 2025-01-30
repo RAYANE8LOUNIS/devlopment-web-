@@ -14,7 +14,12 @@
 </style>
 <body>
     <p class = "m"> Hello World</p>
-    <img src = "london.jpg" style ="height:12cm; width: 20cm;"></img>
+
+    {% for image in images %}
+    <img src = "{{ url_for('static', filename='london.jpg') }}" alt="Image">
+    {% endfor %}
+
+    style ="height:12cm; width: 20cm;"></img>
 
 <h2> rayane TABLE</h2>
     <table>
